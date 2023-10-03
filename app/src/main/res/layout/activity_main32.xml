@@ -9,11 +9,25 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hampter Staring Contest"
+        android:text="Invasión"
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="410dp"
+        android:layout_height="257dp"
+        android:background="@drawable/rescue_rabbit"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_width="410dp"
+        android:layout_height="257dp"
+        android:background="@drawable/rescue_rabbit"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="473dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
