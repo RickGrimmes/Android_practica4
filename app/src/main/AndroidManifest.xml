@@ -4,13 +4,31 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/pngegg"
-        android:label="GaturroPvP"
-        android:roundIcon="@drawable/pngegg"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Practica4GATO">
+        android:theme="@style/Theme.CountdownTimer"
+        tools:targetApi="31">
         <activity
-            android:name=".splasher"
+            android:name=".MainActivity34"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity33"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity32"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity31"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,13 +36,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".AddPlayers"
-            android:exported="true">
-        </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="true"></activity>
     </application>
 
 </manifest>

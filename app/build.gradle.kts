@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.practica4gato"
+    namespace = "com.example.countdowntimer"
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "com.example.practica4gato"
+        applicationId = "com.example.countdowntimer"
         minSdk = 29
         targetSdk = 33
         versionCode = 1

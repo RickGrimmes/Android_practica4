@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "practica4GATO"
+rootProject.name = "countdown timer"
 include(":app")
  
