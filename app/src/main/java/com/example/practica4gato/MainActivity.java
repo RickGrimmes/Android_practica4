@@ -23,16 +23,24 @@ public class MainActivity extends AppCompatActivity {
     private int totalSelectedBoxes = 1;
 
     private LinearLayout playerOneLayout, playerTwoLayout;
-    private TextView playerOneName, playerTwoName;
+    private TextView playerOneName, playerTwoName, playerOneScore, playerTwoScore;
     private ImageView image1, image2, image3, image4, image5, image6, image7, image8, image9;
+
+    private int playerOneWins = 0;
+    private int playerTwoWins = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-         playerOneName = findViewById(R.id.playerOneName);
+
+
+        playerOneName = findViewById(R.id.playerOneName);
          playerTwoName = findViewById(R.id.playerTwoName);
+
+         playerOneScore = findViewById(R.id.score_Player1);
+         playerTwoScore = findViewById(R.id.score_Player2);
 
          playerOneLayout = findViewById(R.id.playerOneLayout);
          playerTwoLayout = findViewById(R.id.playerTwoLayout);
@@ -62,6 +70,9 @@ public class MainActivity extends AppCompatActivity {
         playerOneName.setText(getPlayerOneName);
         playerTwoName.setText(getPlayerTwoName);
 
+// Mostrar el contador inicialmente
+        playerOneScore.setText(String.valueOf(playerOneWins));
+        playerTwoScore.setText(String.valueOf(playerTwoWins));
 
         image1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -160,9 +171,14 @@ public class MainActivity extends AppCompatActivity {
         boxPositions[selectedBoxPosition] = playerTurn;
 
         if (playerTurn == 1){
+            //para cuando gana el jugador 1
              imageView.setImageResource(R.drawable.cross);
 
              if (checkPlayerWin()){
+
+                 playerOneWins++;
+                 playerOneScore.setText(String.valueOf(playerOneWins));
+
                  WinDialog winDialog = new WinDialog(MainActivity.this, playerOneName.getText().toString() + " ganó :D", MainActivity.this);
                  winDialog.setCancelable(false);
                  winDialog.show();
@@ -181,9 +197,14 @@ public class MainActivity extends AppCompatActivity {
         }
         else{
 
+            //para cuando gana el jugador 2
             imageView.setImageResource(R.drawable.circle);
 
             if (checkPlayerWin()){
+
+                playerTwoWins++;
+                playerTwoScore.setText(String.valueOf(playerTwoWins));
+
                 WinDialog winDialog = new WinDialog(MainActivity.this, playerTwoName.getText().toString() + " ganó :D", MainActivity.this);
                 winDialog.setCancelable(false);
                 winDialog.show();

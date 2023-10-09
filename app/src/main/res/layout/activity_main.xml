@@ -24,6 +24,25 @@
         android:gravity="center">
 
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Victorias:"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/score_Player1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <TextView
             android:maxLines="1"
             android:id="@+id/playerOneName"
             android:layout_marginTop="20dp"
@@ -52,6 +71,25 @@
            android:orientation="vertical"
            android:background="@drawable/round_back_dark_clue"
            android:gravity="center">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:gravity="center"
+               android:text="Victorias:"
+               android:textColor="#000000"
+               android:textStyle="bold"
+               android:textSize="16sp" />
+
+           <TextView
+               android:id="@+id/score_Player2"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:gravity="center"
+               android:text="0"
+               android:textColor="#000000"
+               android:textStyle="bold"
+               android:textSize="16sp" />
 
            <TextView
                android:maxLines="1"
